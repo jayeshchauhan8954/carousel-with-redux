@@ -1,21 +1,18 @@
-
 import React from 'react';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import Carousel from './components/Carousel';
-import carouselReducer from './redux/reducers';
-
-const store = createStore(carouselReducer);
-
-function App() {
+import './styles.css';
+import store from './redux/store';
+import Image from './components/Image';
+import Navigation from './components/Navigation';
+const App = () => {
   return (
     <Provider store={store}>
-      <div className="App">
-        <h1>Image Carousel</h1>
-        <Carousel />
+      <div className="app">
+        <Image />
+        <Navigation />
       </div>
     </Provider>
   );
-}
+};
 
 export default App;
